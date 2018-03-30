@@ -240,21 +240,69 @@ input[type=submit] {
 
 
 
-@media screen and (max-width: 980px){
-  body{
-    max-width: 980px;
+@media only screen and (max-width: 980px){
+  .container{
+    max-width: 768px;
+    padding: 0 20px;
   }
 }
 
-@media screen and (max-width: 768px){
+@media only screen and (max-width: 768px){
   body{
     max-width: 760px;
   }
+
+  #masthead{
+    position: static;
+  }
+
+  /* .connect{
+    width: 100%;
+  } */
+
+  .clear-fix::after{  
+    content: "";
+    clear: both;
+    display: table;
+
 }
 
-@media screen and (max-width: 640px){
+.main-section{
+  overflow: auto;
+}
+
+
+  .footer{
+    width: 100%;
+  }
+
+  #id{
+    width: 100%;
+    align-self: auto;
+    /* float: left; */
+  }
+
+  .sidebar{
+    align-self: auto;
+    max-width: 100%;
+    padding: 0 20px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 640px){
   body{
     max-width: 640px;
+  }
+
+  
+
+  .main-section{
+    overflow: auto;
+  }
+
+  #masthead{
+    position: static;
   }
 
   .clear-fix::after{  
@@ -264,11 +312,22 @@ input[type=submit] {
   
   }
 
+  .sidebar{
+    align-self: auto;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .footer{
+    width: 100%;
+    align-self: auto;
+  }
+/* 
   #id{
-    width: 100vw;
+    width: 100%;
     align-self: auto;
     float: left;
-  }
+  } */
 
 
 }
